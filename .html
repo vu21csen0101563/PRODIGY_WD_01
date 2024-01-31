@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #2F4F4F;
+            padding: 15px 0;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        #navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 14px 16px;
+            display: inline-block;
+            transition: color 0.3s ease;
+        }
+
+        #navbar a:hover {
+            color: orangered; /* Change to the desired hover text color */
+        }
+
+        section {
+            height: 800px; /* Replace with the actual content height on your pages */
+            margin-top: 50px; /* Ensure content is not hidden behind the fixed navbar */
+        }
+    </style>
+</head>
+<body>
+
+<div id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<section id="home">
+    <h2>Home</h2>
+    
+</section>
+
+<section id="about">
+    <h2>About</h2>
+    <!-- Your about page content goes here -->
+</section>
+
+<section id="services">
+    <h2>Services</h2>
+    <!-- Your services page content goes here -->
+</section>
+
+<section id="contact">
+    <h2>Contact</h2>
+    <!-- Your contact page content goes here -->
+</section>
+
+<script>
+    window.addEventListener('scroll', function () {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.style.backgroundColor = '#8FBC8F'; // Change background color on scroll
+        } else {
+            navbar.style.backgroundColor = '#2F4F4F'; // Restore original background color
+        }
+    });
+</script>
+
+</body>
+</html>
